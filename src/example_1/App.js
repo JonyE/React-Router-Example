@@ -1,5 +1,5 @@
 import React from 'react';
-import RouterApp from './RouterApp';
+import RouterComponent from './RouterComponent';
 
 export default class MainApp extends React.Component {
     constructor(){
@@ -18,7 +18,7 @@ export default class MainApp extends React.Component {
 
     render() {
         const {data} = this.state;
-        return (data ? <RouterApp data={data}/> : <div>Loading</div>)
+        return (data ? <RouterComponent data={data}/> : <div>Loading</div>)
 
     }
 

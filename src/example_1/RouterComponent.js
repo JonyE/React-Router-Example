@@ -6,7 +6,7 @@ const BaseLayout = (props) => {
     let {data: tabsData} = props;
     tabsData = tabsData.concat().sort((a, b) => (parseInt(a.order) - parseInt(b.order)));
     return (
-        <div className="RoterApp-base">
+        <div>
           <header>
           <p>React Router v4 lazy load</p>
           <nav>
@@ -43,7 +43,6 @@ const BaseLayout = (props) => {
 
 const DynamicComp = (props) => {
     const{from} = props;
-    console.log(props);
     return (<DynamicComponent
         path = {from}
         loader = {() => (<h1>Loading ...</h1>)}/>)
